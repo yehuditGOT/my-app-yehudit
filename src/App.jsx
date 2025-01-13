@@ -30,7 +30,6 @@ function App() {
       setCart([...cart, { ...product, quantity: 1 }]);
     }
   };
-  
 
  const removeFromCart = (product) => {
   const existingProduct = cart.find(item => item.code === product.code);
@@ -44,7 +43,9 @@ function App() {
     setCart(cart.filter(item => item.code !== product.code));
   }
 };
-
+const calculateTotalPrice = () => {
+  return cart.reduce((total, item) => total + item.price * item.quantity, 0);
+};
   return (
     <>
       <header className="homepage-header">
@@ -59,7 +60,7 @@ function App() {
           </nav>
         </header>
         <main>
-          <Routing products={products} cart={cart} addToCart={addToCart} removeFromCart={removeFromCart}/>
+          <Routing products={products} cart={cart} addToCart={addToCart} removeFromCart={removeFromCart} calculateTotalPrice={calculateTotalPrice}/>
           <footer className="homepage-footer">
         <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
           <FaFacebookF />

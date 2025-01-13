@@ -43,7 +43,7 @@ export default function ContactForm() {
             required
           />
         </div>
-        <button type="submit">שלח</button>
+        <button  className="buy-button" type="submit">שלח</button>
       </form>
     </div>
   );

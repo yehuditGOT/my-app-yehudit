@@ -8,16 +8,13 @@ import Profail from './Profail'
 import Cart from './Cart'; 
 import SpecifiProdact from './SpecifiProdact';
 
-
-export const Routing=({products,addToCart,cart,removeFromCart})=>{
+export const Routing=({products,addToCart,cart,removeFromCart,calculateTotalPrice})=>{
 
 return<>
-
 <Routes>
-
     <Route path="/ProductList" element={<ProductList products={products} addToCart={addToCart}/>} />
     <Route path="/About" element={<About/>}/>
-    <Route path="/Cart" element={<Cart cart={cart} removeFromCart={removeFromCart} addToCart={addToCart}/>} />
+    <Route path="/Cart" element={<Cart cart={cart} removeFromCart={removeFromCart} addToCart={addToCart} calculateTotalPrice={calculateTotalPrice}/>} />
     <Route path="/ContactForm" element={<ContactForm/>}/>
     <Route path="/HomePage" element={<HomePage/>}/>
     <Route path="/Payment" element={<Payment/>}/>

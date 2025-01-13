@@ -11,7 +11,7 @@ function Product({ products ,addToCart}) {
         לפרטים נוספים
       </Link>
       
-      <button className="add-to-cart-button" onClick={() => addToCart(products)}>
+      <button  className="buy-button" onClick={() => addToCart(products)}>
           הוסף לעגלה
         </button>
     </div>
