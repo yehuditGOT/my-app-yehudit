@@ -4,7 +4,7 @@ import React from 'react';
 function Product({ products ,addToCart}) {
   return (
     <div className="product"> 
-      <img src={`/images/${products.img}`} alt={products.pName} />
+      <img src={`/Images/${products.img}`} alt={products.pName} />
       <h3>{products.pName}</h3> 
       <p className="price">{products.price} ₪</p>
       <Link to={`/SpecifiProdact/${products.pName}/${products.discraption}`} className="buy-button">

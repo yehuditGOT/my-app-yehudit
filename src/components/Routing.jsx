@@ -7,6 +7,7 @@ import ProductList from './ProductList'
 import Profail from './Profail'
 import Cart from './Cart'; 
 import SpecifiProdact from './SpecifiProdact';
+import Checkout from './Checkout';
 
 export const Routing=({products,addToCart,cart,removeFromCart,calculateTotalPrice})=>{
 
@@ -20,7 +21,8 @@ return<>
     <Route path="/Payment" element={<Payment/>}/>
     <Route path="/Profail" element={<Profail/>}/>  
     <Route path="/SpecifiProdact/:pName/:discraption" element={<SpecifiProdact />} />
-    <Route path="*" element={<h1>ברירת מחדל ,לא מצאנו  </h1>} />
+    <Route path="/Checkout" element={<Checkout calculateTotalPrice={calculateTotalPrice}/>}/>  
+    <Route path="/" element={<HomePage/>} />
 </Routes>
 </>
 }

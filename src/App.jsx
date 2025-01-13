@@ -49,7 +49,7 @@ const calculateTotalPrice = () => {
   return (
     <>
       <header className="homepage-header">
-        <div className="logo">⚪⚫</div>
+        <div className="logo">⚪לוגו⚫</div>
           <nav className="homepage-nav">
             <Link to="/HomePage">Home Page</Link>
             <Link to="/About">About</Link>
