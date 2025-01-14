@@ -1,14 +1,14 @@
 import { useParams } from "react-router-dom";
 
 function SpecifiProdact() {
-    const { pName, discraption } = useParams();
+    const { name, discraption } = useParams();
     
     return (
         <>  
         <br /><br /><br />
         <br /><br /><br />
         <br /><br /><br />
-            <h2>{pName}</h2> 
+            <h2>{name}</h2> 
             <h2>{discraption}</h2> 
         </>
     );

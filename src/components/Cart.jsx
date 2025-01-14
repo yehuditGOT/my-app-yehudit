@@ -8,8 +8,8 @@ function Cart({ cart, removeFromCart,addToCart ,calculateTotalPrice}) {
     <ul>
       {cart.map((item) => (
         <li key={item.code}>
-          <img src={`/Images/${item.img}`} alt={item.pName} width={50} />
-          <p>{item.pName || "אין שם"}</p>
+          <img src={`/Images/${item.img}`} alt={item.name} width={50} />
+          <p>{item.name || "אין שם"}</p>
           <p>{item.price || "אין מחיר"}₪</p>
           <button  className="buy-button" onClick={() => removeFromCart(item)}>➖</button>
           <span>{item.quantity}</span>
