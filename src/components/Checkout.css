@@ -26,7 +26,7 @@
   }
   
   .checkout-total span {
-    color: #2a9d8f;
+    color: #fc9dfc;
     font-weight: bold;
   }
   
@@ -36,7 +36,7 @@
     font-size: 1rem;
     font-weight: bold;
     color: white;
-    background-color: #007bff;
+    background-color:  #fdb8ff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -44,7 +44,7 @@
   }
   
   .checkout-button:hover {
-    background-color: #0056b3;
+    background-color: #fca4ff;
   }
   
   /* התאמות למסכים קטנים */

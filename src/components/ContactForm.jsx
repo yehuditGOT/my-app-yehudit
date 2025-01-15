@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './ContactForm.css';
 
 export default function ContactForm() {
   const [name, setName] = useState('');
@@ -7,7 +8,7 @@ export default function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert(`הודעה נשלחה!\nשם: ${name}\nדוא"ל: ${email}\nהודעה: ${message}`);
+    alert(`Message sent!\nName: ${name}\nEmail: ${email}\nMessage: ${message}`);
     setName('');
     setEmail('');
     setMessage('');
@@ -15,10 +16,10 @@ export default function ContactForm() {
 
   return (
     <div className="contact-form">
-      <h2>צור קשר</h2>
+      <h2>Contact Us</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <label>שם:</label>
+          <label>Name:</label>
           <input
             type="text"
             value={name}
@@ -27,7 +28,7 @@ export default function ContactForm() {
           />
         </div>
         <div>
-          <label>דוא"ל:</label>
+          <label>Email:</label>
           <input
             type="email"
             value={email}
@@ -36,14 +37,14 @@ export default function ContactForm() {
           />
         </div>
         <div>
-          <label>הודעה:</label>
+          <label>Message:</label>
           <textarea
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             required
           />
         </div>
-        <button  className="buy-button" type="submit">שלח</button>
+        <button className="buy-button" type="submit">Send</button>
       </form>
     </div>
   );

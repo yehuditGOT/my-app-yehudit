@@ -1,0 +1,79 @@
+/* Container של טופס הרשמה */
+.register-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff; /* צבע רקע בהיר */
+    border-radius: 12px;
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    margin: 80px auto; /* מיקום במרכז העמוד */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* צללים רכים */
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .register-container:hover {
+    transform: translateY(-5px); /* אפקט על הריחוף */
+  }
+  
+  /* כותרת */
+  .register-title {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: rgb(250,117,117); /* צבע כחול/אדום חמים */
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* שדות קלט */
+  .register-container input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+    background-color: #f5f5f5;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .register-container input:focus {
+    border-color: rgb(250,117,117); /* צבע מיקוד */
+    background-color: #fff; /* רקע בהיר כשיש פוקוס */
+    outline: none;
+  }
+  
+  /* כפתור הרשמה */
+  .register-container button {
+    width: 100%;
+    padding: 15px;
+    background-color: rgb(250,117,117); /* צבע כפתור */
+    color: white;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .register-container button:hover {
+    background-color: rgb(250, 80, 80); /* צבע כהה יותר בהעברה */
+    transform: translateY(-3px); /* אפקט הריחוף */
+  }
+  
+  /* קישור שניתן להוסיף בעת הצורך */
+  .register-container .additional-link {
+    color: rgb(250,117,117);
+    text-decoration: none;
+    margin-top: 15px;
+    font-size: 1em;
+  }
+  
+  .register-container .additional-link:hover {
+    color: rgb(250, 80, 80);
+    text-decoration: underline;
+  }
+  

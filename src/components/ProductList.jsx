@@ -1,15 +1,11 @@
-import { Link } from "react-router-dom";
 import Product from "./Product";
-import AddProduct from './AddProduct';
 
-
-const ProductList = ({ products, addToCart, removeFromCart }) => {
+const ProductList = ({ products, addToCart, removeFromCart ,deleteProduct}) => {
   return (
     <>
-      <Link to="./AddProduct">AddProduct</Link>
       <div className="container">
         <div className="product-list">
-          {products.map((products, index) => (<Product key={index} products={products} addToCart={addToCart} removeFromCart={removeFromCart} />
+          {products.map((products, index) => (<Product key={index} products={products} addToCart={addToCart} removeFromCart={removeFromCart} deleteProduct={deleteProduct}/>
           ))}
         </div>
       </div>

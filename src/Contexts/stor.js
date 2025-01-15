@@ -7,7 +7,6 @@ export const CreateStor = () => {
   ]);
 
   const [currentUser, setCurrentUser] = useState(null);
-
   const stor = {
     users,
     currentUser,

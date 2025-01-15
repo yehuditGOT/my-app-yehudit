@@ -1,0 +1,59 @@
+/* עיצוב כללי למרכיב */
+.product-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;  /* מסדר את התמונה והמלל בשורה */
+    align-items: center;  /* יישור התוכן לאורך ציר ה-Y */
+    justify-content: flex-start;  /* התמונה מצד שמאל והמלל מצד ימין */
+    background: linear-gradient(to bottom right, #ffffff, rgb(255, 255, 255)); 
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(126, 124, 124, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* עיצוב התמונה */
+.product-container img {
+    max-width: 45%;  /* מצמצמים את התמונה כך שתהיה בגודל מתאים */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* תיבת המלל */
+.product-text {
+    display: flex;
+    flex-direction: column;  /* המסדר את שם המוצר והתיאור אחד מתחת לשני */
+    justify-content: center;  /* מיישר את המלל באמצע */
+    margin-left: 20px;  /* מעט ריווח בין התמונה למלל */
+}
+
+/* שם המוצר */
+.product-name {
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;  /* הפחתנו רווח */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* תיאור המוצר */
+.product-description {
+    font-size: 1.2rem;
+    color: #777;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* אפקטים קטנים */
+.product-name:hover {
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.product-description:hover {
+    color: rgb(234, 234, 234);
+    transition: color 0.3s ease;
+}

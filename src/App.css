@@ -4,7 +4,7 @@
   left: 8%;
   width: 80%;
   display: flex; /* Arrange elements horizontally */
-  justify-content: center; /* Center elements horizontally */
+  justify-content: space-between; /* Spread elements across */
   align-items: center; /* Center elements vertically */
   background-color: #fff; /* Set background color */
   padding: 10px 20px; /* Add padding */
@@ -12,11 +12,23 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add a slight shadow */
   z-index: 1000; /* Ensure the header stays above other elements */
 }
-
-.logo {
-  font-size: 2em;
-  font-weight: bold;
+.homepage {
+  height: 100vh; /* גובה של כל העמוד */
+  width: 100vw; /* רוחב של כל העמוד */
+  display: flex; /* הגדרת אלמנטים פנימיים אם יש צורך */
+  justify-content: center; /* למרכז אלמנטים פנימיים */
+  align-items: center;
+  overflow: hidden; /* מונע גלילה מיותרת */
 }
+.homepage-image {
+  width: 100%; /* התמונה תתפוס את כל הרוחב של האלמנט */
+  height: 100%; /* התמונה תתפוס את כל הגובה של האלמנט */
+  object-fit: cover; /* התמונה תכסה את כל השטח מבלי לעוות את הפרופורציות */
+}
+
+
+
+
 
 .homepage-nav a {
   text-decoration: none;
@@ -44,9 +56,18 @@
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
-  background-color: #fef4e8; /* צבע רקע */
+  background-color: #fef4e8;
+  background-size: cover; /* מכסה את כל הרקע */
+  background-position: center; /* ממקם את התמונה במרכז */
+  background-attachment: fixed; /* התמונה נשארת קבועה בעת גלילה */
+  background-repeat: no-repeat; /* לא חוזר על עצמו */
+  height: 100vh; /* מוודא שהתמונה תכסה את כל גובה המסך */
+  width: 100%; /* תופס את כל הרוחב */
   color: #333;
 }
+
+
+
 
 .logo {
   font-size: 2em;
@@ -68,16 +89,6 @@ body {
   width: 100%;
   height: 90vh;
 }
-
-
-.gallery-item {
-  background-color: #000;
-  height: 200px;
-  border-radius: 0;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  
-}
-
 /* Footer */
 .homepage-footer {
   background-color: #333;
@@ -180,11 +191,82 @@ body {
   font-size: 14px;
   cursor: pointer;
   border-radius: 5px;
+  margin-bottom: 10px; /* מוסיף מרווח בין הכפתורים */
+}
+
+.buy-button {
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .buy-button:hover {
-  background-color: rgb(250, 80, 80) /* כהה יותר */
+  transform: translateY(-2px);
 }
+
+.buy-button:hover {
+  background-color: rgb(250, 80, 80); /* כהה יותר */
+}
+
+/* עבור קישורי כפתור עם סגנון */
+.buy-button + .buy-button {
+  display: block; /* משנה את ה-display לאופציה שמאפשרת כפתורים להיות אחד מתחת לשני */
+}
+
+
+
+/* עיצוב כפתור בהדר */
+.homepage-header button {
+  background-color: rgb(250, 117, 117);
+  color: white;
+  padding: 8px 20px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-left: 10px; /* מרחק בין כפתור לשאר האלמנטים בהדר */
+}
+
+/* עיצוב hover בהדר */
+.homepage-header button:hover {
+  background-color: rgb(250, 80, 80); /* כהה יותר בעת מעבר */
+  transform: translateY(-2px); /* הרמת הכפתור */
+}
+/* עיצוב הטקסט בהדר */
+.homepage-header span {
+  font-size: 1.2rem; /* גודל טקסט בינוני */
+  font-weight: bold; /* בולד כדי שיהיה יותר בולט */
+  color: #333; /* צבע כהה להתאמה לאתר */
+  margin-right: 20px; /* מרווח לימין */
+  text-transform: capitalize; /* עיצוב עם אות ראשונה גדולה */
+  transition: color 0.3s ease; /* אנימציה לרך שינוי צבע */
+}
+
+/* שינוי צבע כאשר המשתמש מחובר */
+.homepage-header span {
+  color: rgb(250, 117, 117); /* צבע מתאים לאתר */
+}
+
+/* שינוי צבע כשתנח מעל הטקסט */
+.homepage-header span:hover {
+  color: rgb(250, 80, 80); /* כהה יותר כאשר נעשית אינטרקציה */
+}
+
+.delete-button {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #f25050;
+  transition: transform 0.3s ease, color 0.3s ease;
+  margin-top: 15px; /* מקום מתחת לתמונה */
+}
+
+.delete-button:hover {
+  transform: scale(1.2);
+  color: #e03e3e;
+}
+
 
 
 
